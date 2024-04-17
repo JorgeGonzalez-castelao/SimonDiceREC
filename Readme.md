@@ -162,6 +162,58 @@ es la actividad principal de la aplicación "Simón Dice" en Android. Su funció
 
 Este bloque de código define una función de vista previa que muestra cómo se vería la interfaz de usuario en el diseño de diseño de Compose.
 
+---
 
+# MyView
 
+**Myview para el Juego "Simón Dice"**
+
+En esta sección, explicaremos el código que define la interfaz de usuario del juego "Simón Dice" utilizando Jetpack Compose. Este código se encuentra en el archivo MyView.kt y está diseñado para crear la interfaz de usuario del juego y manejar las interacciones del usuario.
+
+UserInterface
+
+![img_23.png](img_23.png)
+
+**README: Interfaz de Usuario en Jetpack Compose**
+
+En esta sección, explicaremos el código que define la interfaz de usuario del juego "Simón Dice" utilizando Jetpack Compose. Este código se encuentra en el archivo `MyView.kt` y está diseñado para crear la interfaz de usuario del juego y manejar las interacciones del usuario.
+
+### Función `UserInterface`
+
+![img_27.png](img_27.png)
+
+- Esta función `UserInterface` es el punto de entrada para la creación de la interfaz de usuario del juego.
+- Se compone de tres secciones: `round`, `botonesSimon` y `startIncreaseRound`.
+- `miViewModel` es el ViewModel que controla la lógica del juego.
+
+### Función `round`
+
+![img_26.png](img_26.png)
+
+- Esta función representa la sección de la interfaz de usuario que muestra el récord y la ronda actual del juego.
+- Utiliza composable de Jetpack Compose para mostrar los datos del ViewModel.
+
+### Función `botonesSimon`
+
+![img_25.png](img_25.png)
+
+- Esta función representa la sección de la interfaz de usuario que muestra los botones de colores para que el usuario interactúe con ellos.
+- Utiliza composable de Jetpack Compose para crear y manejar los botones de colores.
+
+### Función `botonesSimon`
+
+![img_28.png](img_28.png)
+
+- Esta función representa un botón de color en la interfaz de usuario del juego "Simón Dice".
+- Utiliza un composable Column para colocar el botón en una columna vertical.
+- El botón se crea utilizando el composable Button de Jetpack Compose.
+- El onClick del botón está configurado para ejecutar ciertas acciones cuando se hace clic en él.
+- Llama a los métodos increaseUserSecuence y showButtonPressed del ViewModel para manejar la secuencia del usuario y mostrar el efecto de presionar el botón, respectivamente.
+
+### Función `startIncreaseRound`
+
+![img_24.png](img_24.png)
+
+- Esta función representa la sección de la interfaz de usuario que contiene los botones para iniciar y reiniciar el juego, así como para enviar la secuencia introducida por el usuario.
+- Utiliza composable de Jetpack Compose para crear y manejar estos botones.
 
