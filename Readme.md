@@ -134,7 +134,33 @@ Este ViewModel en Kotlin es responsable de gestionar la lógica del juego "Simó
 
 ---
 
+# MainActivity
 
+**MainActivity para el Juego "Simón Dice"**
+
+es la actividad principal de la aplicación "Simón Dice" en Android. Su función principal es iniciar y configurar la interfaz de usuario de la aplicación, así como establecer la conexión con el ViewModel para manejar la lógica del juego.
+
+![img_21.png](img_21.png)
+
+`class MainActivity` : ComponentActivity(): Define la clase MainActivity que extiende ComponentActivity, que es una clase proporcionada por Jetpack Compose para manejar actividades en aplicaciones modernas de Android.
+
+`override fun onCreate(savedInstanceState: Bundle?)`: Método onCreate que se llama cuando se crea la actividad.
+
+`super.onCreate(savedInstanceState)`: Llama al método onCreate de la clase base.
+
+`var myViewModel = MyViewModel()`: Crea una instancia del ViewModel MyViewModel.
+
+`setContent { ... }`: Establece el contenido de la actividad con una estructura de composición de Jetpack Compose.
+
+`SimonDiceRECTheme { ... }`: Aplica el tema SimonDiceRECTheme a la interfaz de usuario.
+
+`Surface { ... }`: Define una superficie como contenedor principal de la interfaz de usuario, con un color de fondo especificado.
+
+`UserInterface(miViewModel = myViewModel)`: Llama al composable UserInterface pasándole el ViewModel myViewModel como parámetro.
+
+![img_22.png](img_22.png)
+
+Este bloque de código define una función de vista previa que muestra cómo se vería la interfaz de usuario en el diseño de diseño de Compose.
 
 
 
