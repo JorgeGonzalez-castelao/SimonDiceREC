@@ -222,7 +222,7 @@ En esta sección, explicaremos el código que define la interfaz de usuario del 
 - hace referencia al ícono que se muestra en un botón dentro de la interfaz de usuario del juego "Simón Dice"
 - se utiliza para iniciar el juego cuando el estado actual del juego es "Start" o para reanudar el juego cuando el estado es "Reset".
 - para acceder a el o cambiarlo iríamos a res
-- 
+  
 ![img_31.png](img_31.png)
 
 - luego al drawable
@@ -232,10 +232,10 @@ En esta sección, explicaremos el código que define la interfaz de usuario del 
 
 - le daríamos a new y luego new vector asset
 
-- ![img_33.png](img_33.png)
+![img_33.png](img_33.png)
 
 - así quedaría el resultado final
 
-- ![img_34.png](img_34.png)
+![img_34.png](img_34.png)
 
 ### Con esto ya temdríamos todo lo necesario para realizar nuestra APP Simon Dice
