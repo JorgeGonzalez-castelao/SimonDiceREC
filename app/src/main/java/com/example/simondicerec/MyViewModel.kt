@@ -17,9 +17,7 @@ class MyViewModel: ViewModel() {
             return (0..max - 1).random()
         }
 
-        /**
-         * Resets the game
-         */
+
         fun initGame() {
             resetRound()
             resetUserSecuence()
@@ -27,31 +25,22 @@ class MyViewModel: ViewModel() {
             Data.state = State.START
         }
 
-        /**
-         * Resets the round
-         */
+
         fun resetRound() {
             Data.round.value = 0
         }
 
-        /**
-         * Resets the user secuence
-         */
+
         fun resetUserSecuence() {
             Data.UserSecuence.clear()
         }
 
-        /**
-         * Resets the bot secuence
-         */
+
         fun resetBotSecuence() {
             Data.botSecuence.clear()
         }
 
-        /**
-         * Increase the bot secuence
-         * shows the color secuence to the user
-         */
+
         fun increaseShowBotSecuence() {
             Data.state = State.SEQUENCE
             Log.d("ESTADO", Data.state.toString())
@@ -59,9 +48,6 @@ class MyViewModel: ViewModel() {
             showSecuence()
         }
 
-        /**
-         * adds a number to the bot secuence
-         */
         fun addBotSecuence() {
             Data.botSecuence.add(generateRandomNumber(4))
         }
@@ -70,12 +56,7 @@ class MyViewModel: ViewModel() {
             showBotSequence()
         }
 
-        /**
-         * Darken the color
-         * @param color color to darken
-         * @param factor factor to darken
-         * @return color darkened
-         */
+
         fun darkenColor(color: Color, factor: Float): Color {
             val r = (color.red * (1 - factor)).coerceIn(0f, 1f)
             val g = (color.green * (1 - factor)).coerceIn(0f, 1f)
@@ -83,22 +64,13 @@ class MyViewModel: ViewModel() {
             return Color(r, g, b, color.alpha)
         }
 
-        /**
-         * Lighten the color
-         * @param color color to lighten
-         * @param factor factor to lighten
-         * @return color lightened
-         */
+
         fun lightenColor(color: Color, factor: Float): Color {
             val r = (color.red * 255 * (1 - factor) / 255 + factor).coerceIn(0f, 1f)
             val g = (color.green * 255 * (1 - factor) / 255 + factor).coerceIn(0f, 1f)
             val b = (color.blue * 255 * (1 - factor) / 255 + factor).coerceIn(0f, 1f)
             return Color(r, g, b, color.alpha)
         }
-
-        /**
-         * shows the bot secuence to the user
-         */
         fun showBotSequence() {
             viewModelScope.launch {
                 // we need to do the coroutines in the _viewModelScope.launch_

@@ -110,13 +110,6 @@ fun columnButtonSimon(color: MutableState<Color>, myViewModel: MyViewModel){
 
 @Composable
 fun startIncreaseRound(miViewModel: MyViewModel){
-    /* how to make a coroutine in the UI
-    val iuScope = rememberCoroutineScope()
-    // in the button (click), we start a coroutine
-    iuScope.launch {
-        // di de coroutine
-    }*/
-
     Row {
         Column {
             Button(
