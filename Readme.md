@@ -1,8 +1,5 @@
 # Simon Dice
 
-
-¡Claro! Aquí tienes una introducción para un proyecto en Android Studio sobre el juego "Simón Dice":
-
 Introducción:
 
 En este proyecto, nos sumergiremos en la creación de una versión digital del clásico juego de memoria "Simón Dice". Este juego, que ha entretenido a personas de todas las edades durante décadas, 
