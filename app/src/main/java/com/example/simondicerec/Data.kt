@@ -23,22 +23,20 @@ object Data {
     var colorFlag: Color = Color.White
     var colorUserFlag: Color = Color.White
 
-    )
-    enum class MyColors(val color: MutableState<Color>){
-        // go from 0 to 3
-        BLUE(mutableStateOf(Color.Blue)),
-        GREEN(mutableStateOf(Color.Green)),
-        RED(mutableStateOf(Color.Red)),
-        YELLOW(mutableStateOf(Color.Yellow))
-    }
 
-
-    enum class State {
-        START,
-        SEQUENCE,
-        WAITING,
-        INPUT,
-        CHECKING,
-        FINISH
-    }
+}
+enum class MyColors(val color: MutableState<Color>){
+    // go from 0 to 3
+    BLUE(mutableStateOf(Color.Blue)),
+    GREEN(mutableStateOf(Color.Green)),
+    RED(mutableStateOf(Color.Red)),
+    YELLOW(mutableStateOf(Color.Yellow))
+}
+enum class State {
+    START,
+    SEQUENCE,
+    WAITING,
+    INPUT,
+    CHECKING,
+    FINISH
 }

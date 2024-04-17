@@ -68,6 +68,74 @@ Esta enumeración proporciona una estructura clara y fácil de entender para rep
 ![img_5.png](img_5.png)
 
 
+# MyViewModel
+
+**ViewModel para el Juego "Simón Dice"**
+
+Este ViewModel en Kotlin es responsable de gestionar la lógica del juego "Simón Dice" en una aplicación de Android. Contiene métodos para inicializar el juego, generar números aleatorios, restablecer elementos del juego, gestionar la entrada del usuario, mostrar secuencias, verificar la corrección de la secuencia del usuario y controlar el estado del juego.
+
+**Métodos:**
+
+- `generateRandomNumber(max: Int)`: Genera un número aleatorio dentro del rango especificado.
+ 
+![img_6.png](img_6.png)
+
+- `initGame()`: Inicializa el juego restableciendo los elementos del juego y estableciendo el estado del juego en `State.START` (Inicio).
+
+![img_7.png](img_7.png)
+
+- `resetRound()`: Reinicia la ronda actual a 0.
+
+![img_8.png](img_8.png)
+
+- `resetUserSecuence()`: Borra la secuencia del usuario.
+
+![img_9.png](img_9.png)
+
+- `resetBotSecuence()`: Borra la secuencia del bot.
+
+![img_10.png](img_10.png)
+
+- `increaseShowBotSecuence()`: Aumenta la secuencia del bot, muestra la secuencia al usuario y establece el estado del juego en `State.SEQUENCE` (Secuencia).
+
+![img_11.png](img_11.png)
+
+- `showbotSequence()`: Muestra la secuencia del bot al usuario cambiando los colores de los botones.
+
+![img_13.png](img_13.png)
+
+- `showButtonPressed(color: MutableState<Color>)`: Cambia el color del botón presionado por el usuario y establece el estado del juego en `State.INPUT` (Entrada).
+
+![img_14.png](img_14.png)
+
+- `increaseUserSecuence(color: Int)`: Aumenta la secuencia del usuario con el color proporcionado y establece el estado del juego en `State.INPUT`.
+
+![img_15.png](img_15.png)
+
+- `checkSecuence()`: Verifica si la secuencia del usuario es correcta. Si es correcta, aumenta la ronda y reinicia la secuencia del usuario. Si es incorrecta, termina el juego.
+
+![img_16.png](img_16.png)
+
+- `getRound()`: Devuelve la ronda actual.
+
+![img_17.png](img_17.png)
+
+- `getRecord()`: Devuelve el récord actual.
+
+![img_18.png](img_18.png)
+
+- `changePlayStatus()`: Cambia el estado de juego entre "Start" (Inicio) y "Reset", iniciando o reiniciando el juego según corresponda.
+
+![img_19.png](img_19.png)
+
+- `getPlayStatus()`: Devuelve el estado actual del juego.
+
+![img_20.png](img_20.png)
+
+---
+
+
+
 
 
 

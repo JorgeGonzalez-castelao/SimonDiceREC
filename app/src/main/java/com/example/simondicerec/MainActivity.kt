@@ -9,38 +9,39 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.simondicerec.ui.UserInterface
 import com.example.simondicerec.ui.theme.SimonDiceRECTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        var myViewModel = MyViewModel()
         setContent {
             SimonDiceRECTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = Color(255,100,150)
                 ) {
-                    Greeting("Android")
+                    UserInterface(miViewModel = myViewModel)
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
+    var myViewModel = MyViewModel()
     SimonDiceRECTheme {
-        Greeting("Android")
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = Color(255,100,150)
+        ) {
+            UserInterface(miViewModel = myViewModel)
+        }
     }
 }
